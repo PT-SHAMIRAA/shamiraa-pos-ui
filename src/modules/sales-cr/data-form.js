@@ -434,7 +434,9 @@ export class DataForm {
               console.log(salesVoidsItem.discountNominal);
               item.specialDiscount = salesVoidsItem.specialDiscount + "";
               console.log(salesVoidsItem.specialDiscount);
-              item.margin = parseInt(salesVoidsItem.margin);
+              // item.margin = parseInt(salesVoidsItem.margin);
+              // console.log(salesVoidsItem.margin);
+              item.margin = parseFloat(salesVoidsItem.margin);
               console.log(salesVoidsItem.margin);
               this.data.items.push(item);
               this.sumRow(item);
@@ -593,9 +595,9 @@ console.log(this.error)
       : parseInt(itemDetail.discountNominal);
     var margin = eventMargin
       ? eventMargin.srcElement.value
-        ? parseInt(eventMargin.srcElement.value)
-        : parseInt(eventMargin.detail || 0)
-      : parseInt(itemDetail.margin);
+        ? parseFloat(eventMargin.srcElement.value)
+        : parseFloat(eventMargin.detail || 0)
+      : parseFloat(itemDetail.margin);
     itemDetail.total = 0;
     console.log(itemDetail);
     if (parseInt(itemDetail.quantity) > 0) {
