@@ -165,7 +165,7 @@
                             </div>-->
                         </td>
                         <td>
-                            <numeric label="" value.bind="item.margin" error.bind="error.items[$index].margin" read-only.bind="readOnlyFalse" change.delegate="sumRow(item,null,null,null,null,$event)"></numeric>
+                            <numeric label="" value.bind="item.margin" format="0.00" error.bind="error.items[$index].margin" read-only.bind="readOnlyFalse" change.delegate="sumRow(item,null,null,null,null,$event)"></numeric>
                             <!--<div class="form-group ${error.items[$index].margin?'has-error':''}">
                                 <input class="form-control" type="number" name="margin" value.bind="item.margin" change.delegate="sumRow(item)"/>
                                 <span class="help-block">${error.items[$index].margin}</span>
