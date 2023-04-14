@@ -19,7 +19,7 @@ export async function configure(aurelia) {
     .feature("components")
     .plugin("aurelia-api", (config) => {
       var auth = "https://com-shamiraa-service-auth.azurewebsites.net/v1/";
-      var core = "https://com-shamiraaservice-core.azurewebsites.net/v1/";
+      var core = "https://com-shamiraa-service-core.azurewebsites.net/v1/";
       var pos = "https://com-shamiraa-service-pos.azurewebsites.net/v1/";
       var inventory = "https://com-shamiraa-service-warehouse.azurewebsites.net/v1/";
 
